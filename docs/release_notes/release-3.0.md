@@ -31,7 +31,7 @@ Release date: March 31, 2023
 
 **Query engine**
 
-- [Preview] Supports operator **spilling** for large queries, which can use disk space to ensure stable running of queries in case of insufficient memory.
+<!-- - [Preview] Supports operator **spilling** for large queries, which can use disk space to ensure stable running of queries in case of insufficient memory. -->
 - Allows more queries on joined tables to benefit from the [query cache](../using_starrocks/query_cache.md). For example, the query cache now supports aggregate queries on multiple tables that are joined by using  bucket shuffle joins and broadcast joins.
 - Dynamic adaptive parallelism: StarRocks can automatically adjust the `pipeline_dop` parameter for query concurrency.
 
@@ -68,10 +68,6 @@ Release date: March 31, 2023
 
 - Optimized metadata statistics collection.
 - Supports using [SHOW CREATE TABLE](../sql-reference/sql-statements/data-manipulation/SHOW%20CREATE%20TABLE.md) to query the schema information of an external table and using [SHOW CREATE CATALOG](../sql-reference/sql-statements/data-manipulation/SHOW%20CREATE%20CATALOG.md) to query the creation statement of an external catalog.
-
-**Functions**
-
-Window functions [lead](../sql-reference/sql-functions/Window_function.md#lead) and [lag](../sql-reference/sql-functions/Window_function.md#la) support `IGNORE NULLS`.
 
 ### Bug Fixes
 
